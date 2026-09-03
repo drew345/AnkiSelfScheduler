@@ -108,6 +108,25 @@ Initialized locally and pushed to `https://github.com/drew345/AnkiSelfScheduler`
 - Added a self-contained pasteable script at `src/anki-custom-scheduler.js`, installation documentation, and dependency-free Node tests.
 - The script is guarded to the `zEK5000` and `Kor to Eng 5000` deck roots, supports normal and rescheduling-filter state shapes, ignores elapsed overdue time, preserves unrelated state fields, and leaves unmatched decks unchanged.
 - Seven automated tests pass. Live installation still requires a fresh export, confirmation of the exact live deck name, changing the deck-option maximum interval to 3,650, pasting the whole script into Custom scheduling, and checking displayed intervals before answering.
+- Live installation is now complete in both separate Anki accounts. On the first deck, a retained relearning card displayed `25m / 40m / 3d / 6d`, confirming that the custom code executed. The user reported successful completion of the second-deck setup as well.
+- Both accounts have verified pre-installation `.colpkg` rollback backups with scheduling included and media intentionally excluded.
+- Next action: complete a normal full review session on 2026-09-04, note the displayed choices for ordinary review cards as well as relearning cards, and report any surprising intervals or queue behavior before changing the model further.
+
+## 2026-09-03 — Backup audit
+
+- Verified the two files in `C:\GoogleDrive\My Drive\9b.Non Work Related\Korean Ongoing Study\Anki Backups\20260903` as readable modern `.apkg` deck packages with valid ZIP structure and SQLite integrity.
+- Korean-to-English contains 5,179 notes/cards and 243,300 review-log entries; English-to-Korean contains 4,884 notes/cards and 242,851 review-log entries. Their latest review timestamps and counts match the packages previously analyzed.
+- Both packages include scheduling/review history, and their media bundles are empty. The user does not want audio preserved; missing audio is therefore intentional and not a backup defect for this project.
+- These are deck packages that merge on import, not full collection packages that replace the collection. For an exact pre-scheduler rollback, create a separate full collection export for each account with scheduling information enabled and media disabled. Never import both related collections into the same account because their shared note GUIDs can merge.
+- Two later collection packages, `collection-20260903180530.colpkg` and `collection-20260903180620.colpkg`, are structurally valid and include scheduling automatically. Their decompressed collection databases are byte-for-byte identical: both contain only `Kor to Eng 5000`, with 5,179 cards and 273,902 review-log rows.
+- One Korean-to-English collection backup is therefore complete, but a full `zEK5000` collection backup is still needed. Switch and fully sync to the English-to-Korean account, confirm the displayed deck name, and export another collection package with media excluded.
+- Follow-up verification: the duplicate was removed and replaced with `collection-20260903181114.colpkg`. The folder now contains two distinct, healthy full collection backups: `collection-20260903180620.colpkg` for `Kor to Eng 5000` (5,179 cards; 273,902 review-log rows) and `collection-20260903181114.colpkg` for `zEK5000` (4,884 cards; 301,448 review-log rows). Both pass ZIP and SQLite integrity checks, include scheduling, and intentionally contain no media.
+
+## 2026-09-03 — First live installation check
+
+- The user pasted the standalone script into Custom scheduling on the first live AnkiDroid collection.
+- One of the 11 retained relearning cards displayed `25m / 40m / 3d / 6d`, confirming that the script loaded, the deck guard matched, and the post-miss state mutation works on AnkiDroid 2.24.0.
+- The user plans to increase Maximum reviews/day from 30 to 35, keep New cards/day at zero, repeat installation on the second account, and sync each account after its settings are saved.
 
 ## 2026-09-03 — Deliberate 11-card carryover
 
