@@ -1,0 +1,9 @@
+{
+  "name": "anki-self-scheduler",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A transparent custom scheduler for AnkiDroid",
+  "scripts": {
+    "test": "node --test tests/scheduler.test.js"
+  }
+}
