@@ -122,6 +122,14 @@ Initialized locally and pushed to `https://github.com/drew345/AnkiSelfScheduler`
 - One Korean-to-English collection backup is therefore complete, but a full `zEK5000` collection backup is still needed. Switch and fully sync to the English-to-Korean account, confirm the displayed deck name, and export another collection package with media excluded.
 - Follow-up verification: the duplicate was removed and replaced with `collection-20260903181114.colpkg`. The folder now contains two distinct, healthy full collection backups: `collection-20260903180620.colpkg` for `Kor to Eng 5000` (5,179 cards; 273,902 review-log rows) and `collection-20260903181114.colpkg` for `zEK5000` (4,884 cards; 301,448 review-log rows). Both pass ZIP and SQLite integrity checks, include scheduling, and intentionally contain no media.
 
+## 2026-09-03 — Review sort-order investigation
+
+- AnkiDroid 2.24 uses Anki backend 25.09.2. In that exact source, `Ascending retrievability` remains valid with FSRS disabled and explicitly uses the legacy SM-2 relative-overdueness expression `(overdue days / stored interval)`, highest relative overdueness first. The menu label is therefore not an FSRS-only mistake.
+- On both exported collections, the first 35 cards under ascending retrievability would all be stored one-day cards, with a median of roughly 542 days overdue. This strongly explains the observed concentration on extremely weak short-interval cards.
+- `Due date, then random` is not random across the backlog; it prioritizes the oldest due dates and randomizes ties.
+- Recommended current setting: `Random` for ordinary review cards. It gives all currently due cards a chance, while the user's 11 learning/relearning carryovers remain separately prioritized by the learning queue. Expected 1–2-day representation in a random 35-card draw is about 17 cards for English-to-Korean and 14 for Korean-to-English, instead of all 35.
+- Random does not pull cards that are not yet due. Reconsider due-date ordering once the persistent backlog is under control.
+
 ## 2026-09-03 — First live installation check
 
 - The user pasted the standalone script into Custom scheduling on the first live AnkiDroid collection.
