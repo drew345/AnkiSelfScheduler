@@ -62,3 +62,7 @@ The two decks share 4,873 note GUIDs. That explains why importing both descendan
 ### Next action
 
 Specify the scheduler as a small state machine, run it against anonymized distributions resembling both backups, and compare workload and interval outcomes before writing deployable custom-scheduling JavaScript.
+
+### Repository state
+
+Initialized locally and pushed to `https://github.com/drew345/AnkiSelfScheduler` on branch `main`. The initial repository contains only project memory and privacy-oriented ignore rules; no Anki exports or card data were added.
