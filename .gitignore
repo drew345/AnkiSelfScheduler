@@ -1,0 +1,20 @@
+# Anki exports, collections, and user data
+*.apkg
+*.colpkg
+*.anki2
+*.anki21
+collection.media/
+
+# Extracted databases and analysis output
+*.sqlite
+*.sqlite3
+analysis-output/
+tmp/
+
+# Local tooling
+.venv/
+node_modules/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
