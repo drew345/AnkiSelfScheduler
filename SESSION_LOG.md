@@ -143,3 +143,19 @@ Initialized locally and pushed to `https://github.com/drew345/AnkiSelfScheduler`
 - This is a third queue class, not part of the proposed 25 recent + 5 backlog allocation. The desired conceptual composition is 11 must-return cards + 25 other recent/current cards + 5 forced backlog cards.
 - A standard two-filter deck cannot guarantee all three quotas. Rebuilding a filtered deck may also disturb the user's carefully retained working set, so the earlier 25+5 filtered-deck proposal should not be deployed unchanged.
 - Preserve the 11-card workflow while designing an integrated three-lane session mechanism. Custom interval JavaScript alone cannot select or reserve these lanes.
+
+## 2026-09-07 — Positive live result and daily cadence
+
+- The user reports that the custom timing script is working very well in live study.
+- The user is committing to reviewing at least a few words every day to work through the existing backlog. Future workload and cap recommendations should therefore consider a frequent low-minimum cadence rather than the earlier once-weekly pattern alone.
+- Next action: compare the complete AnkiDroid settings from the `zEK5000` and `Kor to Eng 5000` accounts for consistency with each other and with the deployed scheduler, then recommend only justified adjustments.
+
+## 2026-09-07 — Deck-options screenshot audit
+
+- Reviewed complete deck-option screenshots for both live accounts. Both use 0 new cards/day, 35 reviews/day, FSRS off, all Easy Days set to Normal, a 3,650-day maximum interval, matching legacy advanced factors, and the custom scheduler is visibly present.
+- One material inconsistency remains: `Kor to Eng 5000` uses Random review sort order, while `zEK5000` still uses Ascending retrievability. Change `zEK5000` to Random; custom scheduling controls intervals but cannot correct queue selection.
+- Native new-card settings remain historically different (`20m 25m`, Easy 2d for `zEK5000`; `20m 40m`, Easy 6d for `Kor to Eng 5000`). With new cards/day at zero these are inactive, and the custom script overrides targeted new/learning choices to `25m / 40m / 3d / 6d` if new cards are later enabled.
+- Leech thresholds differ (30 versus 40), but both actions are Tag Only. This affects tagging policy, not suspension or the custom interval formula; no immediate change is required.
+- Audio/auto-advance toggles differ, but auto advance is disabled with both delays at zero and those differences do not affect scheduling.
+- Screenshots show the same beginning of the custom scheduler in both accounts but not its full contents, so exact script equality cannot be established from the images alone.
+- Next action: change and save `zEK5000` review sort order to Random, then audit AnkiDroid's higher-level/global reviewing settings, especially Learn Ahead.
