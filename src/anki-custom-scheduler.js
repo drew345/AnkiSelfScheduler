@@ -3,7 +3,7 @@
 
     // This entire file is pasted into Anki's Custom scheduling box.
     const CONFIG = Object.freeze({
-        targetDeckRoots: ["zEK5000", "Kor to Eng 5000"],
+        targetDeckRoots: ["Eng2Kor5000", "Kor2Eng5000"],
         againMinutes: 25,
         hardMinutes: 40,
         relearningGoodDays: 3,

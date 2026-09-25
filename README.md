@@ -40,10 +40,10 @@ The pasted code is self-contained. AnkiDroid does not load `package.json`, the t
 
 Custom scheduling is global. The script acts only on these exact deck roots and their subdecks:
 
-- `zEK5000`
-- `Kor to Eng 5000`
+- `Eng2Kor5000`
+- `Kor2Eng5000`
 
-If either live deck has a different name, update `targetDeckRoots` before installation. Unmatched decks are left unchanged.
+These are the normalized post-integration deck names. The two pre-integration accounts still use `zEK5000` and `Kor to Eng 5000`; keep their already-installed scripts unchanged until migration. Unmatched decks are left unchanged.
 
 ## Testing
 

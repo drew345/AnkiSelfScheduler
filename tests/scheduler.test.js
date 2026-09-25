@@ -72,7 +72,7 @@ function relearningStates() {
     };
 }
 
-function run(states, deckName = "zEK5000") {
+function run(states, deckName = "Eng2Kor5000") {
     vm.runInNewContext(schedulerCode, {
         states,
         ctx: { deckName, seed: 1 },
