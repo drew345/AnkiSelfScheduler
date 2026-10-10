@@ -43,7 +43,7 @@ Custom scheduling is global. The script acts only on these exact deck roots and 
 - `Eng2Kor5000`
 - `Kor2Eng5000`
 
-These are the normalized post-integration deck names. The two pre-integration accounts still use `zEK5000` and `Kor to Eng 5000`; keep their already-installed scripts unchanged until migration. Unmatched decks are left unchanged.
+These are the normalized deck names installed together in the drew3452 account on September 21, 2026; migration is complete. `zEK5000` and `Kor to Eng 5000` identify the historical source accounts/decks, not pending migration work. Do not change any remaining legacy account without explicit authorization. Unmatched decks are left unchanged.
 
 ## Testing
 

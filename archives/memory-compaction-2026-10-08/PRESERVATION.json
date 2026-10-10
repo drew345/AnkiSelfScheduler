@@ -1,0 +1,45 @@
+{
+  "Date": "2026-10-08",
+  "TimeZone": "Asia/Seoul",
+  "Device": "ROBERTSLGGRAM17",
+  "Scope": "Documentation-only memory compaction; archived next actions are historical",
+  "Originals": [
+    {
+      "File": "AGENTS.md",
+      "OriginalBytes": 3230,
+      "OriginalSHA256": "1B8275E0CE7EBBCD79E746B918E8C6F4F19912D0337A4EF7E0CC62C4ECA9A2CA",
+      "PreservedVerbatim": true
+    },
+    {
+      "File": "README.md",
+      "OriginalBytes": 2057,
+      "OriginalSHA256": "6EC8214F4A3AF3FCA280268C660AC99DAC61C9148F90EEC41DFFFA85739FDBD2",
+      "PreservedVerbatim": true
+    },
+    {
+      "File": "SESSION_LOG.md",
+      "OriginalBytes": 52649,
+      "OriginalSHA256": "FA30DB8E26FEC895FEB3BB6224FCDB252C26415E89BC10EF486A92A15FF6A361",
+      "PreservedVerbatim": true
+    }
+  ],
+  "Installed": [
+    {
+      "File": "AGENTS.md",
+      "Bytes": 3867,
+      "SHA256": "0DCA3BFFDBBCFDEE5ED33B66031FFF087611D2F17FA698F83433C3A3CA079D21"
+    },
+    {
+      "File": "README.md",
+      "Bytes": 2170,
+      "SHA256": "0CFB4B18F58EC6674868816B3BDE5F114C83708E418C3C23766984617046FD49"
+    },
+    {
+      "File": "SESSION_LOG.md",
+      "Bytes": 5341,
+      "SHA256": "9512E4C41D11CA9BA73DCEDCE732168416BA6B0C48E4B8EECE22DDCC50AEDAA5"
+    }
+  ],
+  "SchedulerSourceUnchanged": true,
+  "ProjectReferencesVerified": true
+}
